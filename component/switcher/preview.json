@@ -1,0 +1,64 @@
+{
+  "id": "switcher",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "size",
+      "label": "Size",
+      "type": "select",
+      "default": "m",
+      "options": {
+        "m": {
+          "label": "M",
+          "removeClass": ["switcher--s"],
+          "attr": {
+            "aria-label": "M switcher"
+          }
+        },
+        "s": {
+          "label": "S",
+          "addClass": ["switcher--s"],
+          "attr": {
+            "aria-label": "S switcher"
+          }
+        }
+      }
+    },
+    {
+      "id": "checked",
+      "label": "Checked",
+      "type": "boolean",
+      "default": false,
+      "options": {
+        "false": {
+          "attr": {
+            "aria-checked": "false"
+          }
+        },
+        "true": {
+          "attr": {
+            "aria-checked": "true"
+          }
+        }
+      }
+    },
+    {
+      "id": "disabled",
+      "label": "Disabled",
+      "type": "boolean",
+      "default": false,
+      "options": {
+        "false": {
+          "attr": {
+            "disabled": null
+          }
+        },
+        "true": {
+          "attr": {
+            "disabled": ""
+          }
+        }
+      }
+    }
+  ]
+}

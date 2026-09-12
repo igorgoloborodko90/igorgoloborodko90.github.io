@@ -1,0 +1,119 @@
+{
+  "id": "priority",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "state",
+      "label": "State",
+      "type": "select",
+      "default": "default",
+      "options": {
+        "default": {
+          "label": "Default",
+          "addClass": ["priority--default"],
+          "removeClass": ["priority--shimmer", "priority--waiting", "priority--reload", "priority--informer", "priority--mid", "priority--low", "priority--unavailable"],
+          "attr": { "aria-label": "Driver priority 99 of 100" },
+          "mutations": [
+            { "selector": ".priority__label-text", "text": "Приоритет" },
+            { "selector": ".priority__value", "text": "99/100" },
+            { "selector": ".priority__chevron", "hidden": false },
+            { "selector": ".priority__badge", "hidden": true },
+            { "selector": ".priority__lock-badge", "hidden": true },
+            { "selector": ".priority__reload", "attr": { "hidden": "" } },
+            { "selector": ".priority__waiting", "attr": { "hidden": "" } }
+          ]
+        },
+        "informer": {
+          "label": "Informer",
+          "addClass": ["priority--informer"],
+          "removeClass": ["priority--shimmer", "priority--waiting", "priority--reload", "priority--default", "priority--mid", "priority--low", "priority--unavailable"],
+          "attr": { "aria-label": "Driver priority 99 of 100 with informer" },
+          "mutations": [
+            { "selector": ".priority__label-text", "text": "Приоритет" },
+            { "selector": ".priority__value", "text": "99/100" },
+            { "selector": ".priority__chevron", "hidden": true },
+            { "selector": ".priority__badge", "hidden": false },
+            { "selector": ".priority__lock-badge", "hidden": true },
+            { "selector": ".priority__reload", "attr": { "hidden": "" } },
+            { "selector": ".priority__waiting", "attr": { "hidden": "" } }
+          ]
+        },
+        "mid": {
+          "label": "Mid Priority",
+          "addClass": ["priority--mid"],
+          "removeClass": ["priority--shimmer", "priority--waiting", "priority--reload", "priority--default", "priority--informer", "priority--low", "priority--unavailable"],
+          "attr": { "aria-label": "Driver priority 67 of 100" },
+          "mutations": [
+            { "selector": ".priority__label-text", "text": "Приоритет" },
+            { "selector": ".priority__value", "text": "67/100" },
+            { "selector": ".priority__chevron", "hidden": false },
+            { "selector": ".priority__badge", "hidden": true },
+            { "selector": ".priority__lock-badge", "hidden": true },
+            { "selector": ".priority__reload", "attr": { "hidden": "" } },
+            { "selector": ".priority__waiting", "attr": { "hidden": "" } }
+          ]
+        },
+        "low": {
+          "label": "Low Priority",
+          "addClass": ["priority--low"],
+          "removeClass": ["priority--shimmer", "priority--waiting", "priority--reload", "priority--default", "priority--informer", "priority--mid", "priority--unavailable"],
+          "attr": { "aria-label": "Driver priority 43 of 100" },
+          "mutations": [
+            { "selector": ".priority__label-text", "text": "Приоритет" },
+            { "selector": ".priority__value", "text": "43/100" },
+            { "selector": ".priority__chevron", "hidden": false },
+            { "selector": ".priority__badge", "hidden": true },
+            { "selector": ".priority__lock-badge", "hidden": true },
+            { "selector": ".priority__reload", "attr": { "hidden": "" } },
+            { "selector": ".priority__waiting", "attr": { "hidden": "" } }
+          ]
+        },
+        "unavailable": {
+          "label": "n/a WorkMode",
+          "addClass": ["priority--unavailable"],
+          "removeClass": ["priority--shimmer", "priority--waiting", "priority--reload", "priority--default", "priority--informer", "priority--mid", "priority--low"],
+          "attr": { "aria-label": "Priority unavailable in flexible mode" },
+          "mutations": [
+            { "selector": ".priority__label-text", "text": "Недоступен" },
+            { "selector": ".priority__value", "text": "в Гибком" },
+            { "selector": ".priority__chevron", "hidden": false },
+            { "selector": ".priority__badge", "hidden": true },
+            { "selector": ".priority__lock-badge", "hidden": false },
+            { "selector": ".priority__reload", "attr": { "hidden": "" } },
+            { "selector": ".priority__waiting", "attr": { "hidden": "" } }
+          ]
+        },
+        "waiting": {
+          "label": "Waiting",
+          "addClass": ["priority--waiting"],
+          "removeClass": ["priority--shimmer", "priority--reload", "priority--default", "priority--informer", "priority--mid", "priority--low", "priority--unavailable"],
+          "attr": { "aria-label": "Priority loading" },
+          "mutations": [
+            { "selector": ".priority__reload", "attr": { "hidden": "" } },
+            { "selector": ".priority__waiting", "attr": { "hidden": null } }
+          ]
+        },
+        "reload": {
+          "label": "Reload",
+          "addClass": ["priority--reload"],
+          "removeClass": ["priority--shimmer", "priority--waiting", "priority--default", "priority--informer", "priority--mid", "priority--low", "priority--unavailable"],
+          "attr": { "aria-label": "Reload priority" },
+          "mutations": [
+            { "selector": ".priority__reload", "attr": { "hidden": null } },
+            { "selector": ".priority__waiting", "attr": { "hidden": "" } }
+          ]
+        },
+        "shimmer": {
+          "label": "Shimmer",
+          "addClass": ["priority--shimmer"],
+          "removeClass": ["priority--waiting", "priority--reload", "priority--default", "priority--informer", "priority--mid", "priority--low", "priority--unavailable"],
+          "attr": { "aria-label": "Priority skeleton" },
+          "mutations": [
+            { "selector": ".priority__reload", "attr": { "hidden": "" } },
+            { "selector": ".priority__waiting", "attr": { "hidden": "" } }
+          ]
+        }
+      }
+    }
+  ]
+}

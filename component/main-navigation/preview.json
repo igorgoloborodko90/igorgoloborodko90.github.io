@@ -1,0 +1,50 @@
+{
+  "id": "main-navigation",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "rightAction",
+      "label": "Right action",
+      "type": "select",
+      "default": "radar-online-active",
+      "options": {
+        "radar-online-active": {
+          "label": "Radar Online · Active",
+          "addClass": ["main-navigation__right-action--radar-online", "main-navigation__right-action--active"],
+          "removeClass": ["main-navigation__right-action--radar-offline", "main-navigation__right-action--suggest"],
+          "attr": { "aria-label": "Radar online active" }
+        },
+        "radar-online": {
+          "label": "Radar Online",
+          "addClass": ["main-navigation__right-action--radar-online"],
+          "removeClass": ["main-navigation__right-action--radar-offline", "main-navigation__right-action--suggest", "main-navigation__right-action--active"],
+          "attr": { "aria-label": "Radar online inactive" }
+        },
+        "radar-offline-active": {
+          "label": "Radar Offline · Active",
+          "addClass": ["main-navigation__right-action--radar-offline", "main-navigation__right-action--active"],
+          "removeClass": ["main-navigation__right-action--radar-online", "main-navigation__right-action--suggest"],
+          "attr": { "aria-label": "Radar offline active" }
+        },
+        "radar-offline": {
+          "label": "Radar Offline",
+          "addClass": ["main-navigation__right-action--radar-offline"],
+          "removeClass": ["main-navigation__right-action--radar-online", "main-navigation__right-action--suggest", "main-navigation__right-action--active"],
+          "attr": { "aria-label": "Radar offline inactive" }
+        },
+        "suggest-active": {
+          "label": "Suggest · Active",
+          "addClass": ["main-navigation__right-action--suggest", "main-navigation__right-action--active"],
+          "removeClass": ["main-navigation__right-action--radar-online", "main-navigation__right-action--radar-offline"],
+          "attr": { "aria-label": "Suggest active" }
+        },
+        "suggest": {
+          "label": "Suggest",
+          "addClass": ["main-navigation__right-action--suggest"],
+          "removeClass": ["main-navigation__right-action--radar-online", "main-navigation__right-action--radar-offline", "main-navigation__right-action--active"],
+          "attr": { "aria-label": "Suggest inactive" }
+        }
+      }
+    }
+  ]
+}

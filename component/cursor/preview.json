@@ -1,0 +1,38 @@
+{
+  "id": "cursor",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "state",
+      "label": "State",
+      "type": "select",
+      "default": "online",
+      "options": {
+        "online": {
+          "label": "Online",
+          "addClass": ["cursor--online"],
+          "removeClass": ["cursor--bonus", "cursor--block", "cursor--offline"],
+          "attr": { "aria-label": "Cursor online" }
+        },
+        "bonus": {
+          "label": "Bonus",
+          "addClass": ["cursor--bonus"],
+          "removeClass": ["cursor--online", "cursor--block", "cursor--offline"],
+          "attr": { "aria-label": "Cursor bonus" }
+        },
+        "block": {
+          "label": "Block",
+          "addClass": ["cursor--block"],
+          "removeClass": ["cursor--online", "cursor--bonus", "cursor--offline"],
+          "attr": { "aria-label": "Cursor blocked" }
+        },
+        "offline": {
+          "label": "Offline",
+          "addClass": ["cursor--offline"],
+          "removeClass": ["cursor--online", "cursor--bonus", "cursor--block"],
+          "attr": { "aria-label": "Cursor offline" }
+        }
+      }
+    }
+  ]
+}

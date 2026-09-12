@@ -1,0 +1,62 @@
+{
+  "id": "check",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "size",
+      "label": "Size",
+      "type": "select",
+      "default": "m",
+      "options": {
+        "m": {
+          "label": "M",
+          "removeClass": ["slot-trail-check--s"]
+        },
+        "s": {
+          "label": "S",
+          "addClass": ["slot-trail-check--s"]
+        }
+      }
+    },
+    {
+      "id": "checked",
+      "label": "Checked",
+      "type": "boolean",
+      "default": false,
+      "options": {
+        "false": {
+          "selector": ".slot-trail-check__input",
+          "attr": {
+            "checked": null
+          }
+        },
+        "true": {
+          "selector": ".slot-trail-check__input",
+          "attr": {
+            "checked": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "disabled",
+      "label": "Disabled",
+      "type": "boolean",
+      "default": false,
+      "options": {
+        "false": {
+          "selector": ".slot-trail-check__input",
+          "attr": {
+            "disabled": null
+          }
+        },
+        "true": {
+          "selector": ".slot-trail-check__input",
+          "attr": {
+            "disabled": ""
+          }
+        }
+      }
+    }
+  ]
+}

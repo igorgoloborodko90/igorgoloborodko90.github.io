@@ -1,0 +1,32 @@
+{
+  "id": "chat-response",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "state",
+      "label": "State",
+      "type": "select",
+      "default": "complete",
+      "options": {
+        "loading": {
+          "label": "Waiting",
+          "attr": {
+            "data-chat-response-state": "loading"
+          }
+        },
+        "typing": {
+          "label": "Typing",
+          "attr": {
+            "data-chat-response-state": "typing"
+          }
+        },
+        "complete": {
+          "label": "Complete",
+          "attr": {
+            "data-chat-response-state": "complete"
+          }
+        }
+      }
+    }
+  ]
+}

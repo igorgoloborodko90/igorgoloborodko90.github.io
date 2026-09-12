@@ -1,0 +1,183 @@
+{
+  "id": "control-tag",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "size",
+      "label": "Size",
+      "type": "select",
+      "default": "l",
+      "options": {
+        "l": {
+          "label": "L",
+          "addClass": ["control-tag--l"],
+          "removeClass": ["control-tag--m", "control-tag--s"],
+          "mutations": [
+            { "selector": ".control-tag__icon .icon", "removeClass": ["icon--16", "icon--20"], "addClass": ["icon--24"] }
+          ]
+        },
+        "m": {
+          "label": "M",
+          "addClass": ["control-tag--m"],
+          "removeClass": ["control-tag--l", "control-tag--s"],
+          "mutations": [
+            { "selector": ".control-tag__icon .icon", "removeClass": ["icon--16", "icon--24"], "addClass": ["icon--20"] }
+          ]
+        },
+        "s": {
+          "label": "S",
+          "addClass": ["control-tag--s"],
+          "removeClass": ["control-tag--l", "control-tag--m"],
+          "mutations": [
+            { "selector": ".control-tag__icon .icon", "removeClass": ["icon--20", "icon--24"], "addClass": ["icon--16"] }
+          ]
+        }
+      }
+    },
+    {
+      "id": "form",
+      "label": "Form",
+      "type": "select",
+      "default": "round",
+      "options": {
+        "round": {
+          "label": "Round",
+          "addClass": ["control-tag--round"],
+          "removeClass": ["control-tag--squircle"]
+        },
+        "squircle": {
+          "label": "Squircle",
+          "addClass": ["control-tag--squircle"],
+          "removeClass": ["control-tag--round"]
+        }
+      }
+    },
+    {
+      "id": "type",
+      "label": "Type",
+      "type": "select",
+      "default": "main",
+      "options": {
+        "main": {
+          "label": "Main",
+          "addClass": ["control-tag--main"],
+          "removeClass": ["control-tag--default", "control-tag--outline", "control-tag--money", "control-tag--status", "control-tag--info"]
+        },
+        "default": {
+          "label": "Default",
+          "addClass": ["control-tag--default"],
+          "removeClass": ["control-tag--main", "control-tag--outline", "control-tag--money", "control-tag--status", "control-tag--info"]
+        },
+        "outline": {
+          "label": "Outline",
+          "addClass": ["control-tag--outline"],
+          "removeClass": ["control-tag--main", "control-tag--default", "control-tag--money", "control-tag--status", "control-tag--info"]
+        },
+        "money": {
+          "label": "Money",
+          "addClass": ["control-tag--money"],
+          "removeClass": ["control-tag--main", "control-tag--default", "control-tag--outline", "control-tag--status", "control-tag--info"]
+        },
+        "status": {
+          "label": "Status",
+          "addClass": ["control-tag--status"],
+          "removeClass": ["control-tag--main", "control-tag--default", "control-tag--outline", "control-tag--money", "control-tag--info"]
+        },
+        "info": {
+          "label": "Info",
+          "addClass": ["control-tag--info"],
+          "removeClass": ["control-tag--main", "control-tag--default", "control-tag--outline", "control-tag--money", "control-tag--status"]
+        }
+      }
+    },
+    {
+      "id": "selected",
+      "label": "Selected",
+      "type": "boolean",
+      "default": false,
+      "options": {
+        "false": {
+          "removeClass": ["control-tag--selected"]
+        },
+        "true": {
+          "addClass": ["control-tag--selected"]
+        }
+      }
+    },
+    {
+      "id": "disabled",
+      "label": "Disabled",
+      "type": "boolean",
+      "default": false,
+      "options": {
+        "false": {
+          "attr": {
+            "disabled": null,
+            "aria-disabled": null
+          }
+        },
+        "true": {
+          "attr": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      }
+    },
+    {
+      "id": "leftIcon",
+      "label": "Left icon",
+      "type": "boolean",
+      "default": true,
+      "options": {
+        "false": {
+          "selector": ".control-tag__icon--left",
+          "hidden": true
+        },
+        "true": {
+          "selector": ".control-tag__icon--left",
+          "hidden": false
+        }
+      }
+    },
+    {
+      "id": "rightIcon",
+      "label": "Right icon",
+      "type": "boolean",
+      "default": true,
+      "options": {
+        "false": {
+          "selector": ".control-tag__icon--right",
+          "hidden": true
+        },
+        "true": {
+          "selector": ".control-tag__icon--right",
+          "hidden": false
+        }
+      }
+    },
+    {
+      "id": "label",
+      "label": "Label",
+      "type": "select",
+      "default": "title",
+      "options": {
+        "title": {
+          "label": "Title",
+          "selector": ".control-tag__label",
+          "text": "Title"
+        },
+        "short": {
+          "label": "+4%",
+          "selector": ".control-tag__label",
+          "text": "+4%"
+        },
+        "long": {
+          "label": "Long title",
+          "selector": ".control-tag__label",
+          "text": "Long title"
+        }
+      }
+    }
+  ]
+}

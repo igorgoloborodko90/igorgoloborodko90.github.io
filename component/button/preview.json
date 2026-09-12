@@ -1,0 +1,113 @@
+{
+  "id": "button",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "variant",
+      "label": "Variant",
+      "type": "select",
+      "default": "main",
+      "options": {
+        "main": {
+          "label": "Main",
+          "removeClass": ["button--minor", "button--danger", "button--outline", "button--floating", "button--ghost"],
+          "addClass": ["button--main"]
+        },
+        "minor": {
+          "label": "Minor",
+          "removeClass": ["button--main", "button--danger", "button--outline", "button--floating", "button--ghost"],
+          "addClass": ["button--minor"]
+        },
+        "danger": {
+          "label": "Danger",
+          "removeClass": ["button--main", "button--minor", "button--outline", "button--floating", "button--ghost"],
+          "addClass": ["button--danger"]
+        },
+        "outline": {
+          "label": "Outline",
+          "removeClass": ["button--main", "button--minor", "button--danger", "button--floating", "button--ghost"],
+          "addClass": ["button--outline"]
+        },
+        "floating": {
+          "label": "Floating",
+          "removeClass": ["button--main", "button--minor", "button--danger", "button--outline", "button--ghost"],
+          "addClass": ["button--floating"]
+        },
+        "ghost": {
+          "label": "Ghost",
+          "removeClass": ["button--main", "button--minor", "button--danger", "button--outline", "button--floating"],
+          "addClass": ["button--ghost"]
+        }
+      }
+    },
+    {
+      "id": "size",
+      "label": "Size",
+      "type": "select",
+      "default": "l",
+      "options": {
+        "xl": {
+          "label": "XL",
+          "removeClass": ["button--l", "button--m", "button--s", "button--xs"],
+          "addClass": ["button--xl"]
+        },
+        "l": {
+          "label": "L",
+          "removeClass": ["button--xl", "button--m", "button--s", "button--xs"],
+          "addClass": ["button--l"]
+        },
+        "m": {
+          "label": "M",
+          "removeClass": ["button--xl", "button--l", "button--s", "button--xs"],
+          "addClass": ["button--m"]
+        },
+        "s": {
+          "label": "S",
+          "removeClass": ["button--xl", "button--l", "button--m", "button--xs"],
+          "addClass": ["button--s"]
+        },
+        "xs": {
+          "label": "XS",
+          "removeClass": ["button--xl", "button--l", "button--m", "button--s"],
+          "addClass": ["button--xs"]
+        }
+      }
+    },
+    {
+      "id": "shape",
+      "label": "Shape",
+      "type": "select",
+      "default": "squircle",
+      "options": {
+        "squircle": {
+          "label": "Squircle",
+          "removeClass": ["button--circle"],
+          "addClass": ["button--squircle"]
+        },
+        "circle": {
+          "label": "Circle",
+          "removeClass": ["button--squircle"],
+          "addClass": ["button--circle"]
+        }
+      }
+    },
+    {
+      "id": "disabled",
+      "label": "Disabled",
+      "type": "boolean",
+      "default": false,
+      "options": {
+        "false": {
+          "attr": {
+            "disabled": null
+          }
+        },
+        "true": {
+          "attr": {
+            "disabled": ""
+          }
+        }
+      }
+    }
+  ]
+}

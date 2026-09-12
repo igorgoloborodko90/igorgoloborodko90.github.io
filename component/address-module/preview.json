@@ -1,0 +1,60 @@
+{
+  "id": "address-module",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "points",
+      "label": "Points",
+      "type": "select",
+      "default": "single",
+      "options": {
+        "single": {
+          "label": "Single point",
+          "removeClass": ["address-module--two", "address-module--stop", "address-module--multiple-stops"],
+          "addClass": ["address-module--single"],
+          "attr": {
+            "aria-label": "Single address point"
+          }
+        },
+        "two": {
+          "label": "Two points",
+          "removeClass": ["address-module--single", "address-module--stop", "address-module--multiple-stops"],
+          "addClass": ["address-module--two"],
+          "attr": {
+            "aria-label": "Two address points"
+          }
+        },
+        "stop": {
+          "label": "Two points with stop",
+          "removeClass": ["address-module--single", "address-module--two", "address-module--multiple-stops"],
+          "addClass": ["address-module--stop"],
+          "attr": {
+            "aria-label": "Two address points with one stop"
+          }
+        },
+        "multiple-stops": {
+          "label": "Two points with multiple stops",
+          "removeClass": ["address-module--single", "address-module--two", "address-module--stop"],
+          "addClass": ["address-module--multiple-stops"],
+          "attr": {
+            "aria-label": "Two address points with multiple stops"
+          }
+        }
+      }
+    },
+    {
+      "id": "alert",
+      "label": "Alert on address",
+      "type": "boolean",
+      "default": false,
+      "options": {
+        "false": {
+          "removeClass": ["address-module--alert"]
+        },
+        "true": {
+          "addClass": ["address-module--alert"]
+        }
+      }
+    }
+  ]
+}

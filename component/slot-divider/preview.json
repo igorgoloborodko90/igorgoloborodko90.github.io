@@ -1,0 +1,92 @@
+{
+  "id": "slot-divider",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "type",
+      "label": "Type",
+      "type": "select",
+      "default": "group-title",
+      "options": {
+        "group-title": {
+          "label": "GroupTitle",
+          "addClass": ["slot-divider--group-title"],
+          "removeClass": ["slot-divider--line", "slot-divider--line-margin", "slot-divider--line-slot", "slot-divider--line-slot-margin", "slot-divider--line-web", "slot-divider--line-margin-web", "slot-divider--line-slot-web", "slot-divider--line-slot-margin-web", "slot-divider--focus", "slot-divider--focus-margin", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": "Group title", "aria-label": null }
+        },
+        "line": {
+          "label": "Line",
+          "addClass": ["slot-divider--line"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line-margin", "slot-divider--line-slot", "slot-divider--line-slot-margin", "slot-divider--line-web", "slot-divider--line-margin-web", "slot-divider--line-slot-web", "slot-divider--line-slot-margin-web", "slot-divider--focus", "slot-divider--focus-margin", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Line" }
+        },
+        "line-margin": {
+          "label": "LineMargin",
+          "addClass": ["slot-divider--line-margin"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line", "slot-divider--line-slot", "slot-divider--line-slot-margin", "slot-divider--line-web", "slot-divider--line-margin-web", "slot-divider--line-slot-web", "slot-divider--line-slot-margin-web", "slot-divider--focus", "slot-divider--focus-margin", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Line with margins" }
+        },
+        "line-slot": {
+          "label": "LineSlot",
+          "addClass": ["slot-divider--line-slot"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line", "slot-divider--line-margin", "slot-divider--line-slot-margin", "slot-divider--line-web", "slot-divider--line-margin-web", "slot-divider--line-slot-web", "slot-divider--line-slot-margin-web", "slot-divider--focus", "slot-divider--focus-margin", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Slot-indented line" }
+        },
+        "line-slot-margin": {
+          "label": "LineSlotMargin",
+          "addClass": ["slot-divider--line-slot-margin"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line", "slot-divider--line-margin", "slot-divider--line-slot", "slot-divider--line-web", "slot-divider--line-margin-web", "slot-divider--line-slot-web", "slot-divider--line-slot-margin-web", "slot-divider--focus", "slot-divider--focus-margin", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Slot-indented line with trailing margin" }
+        },
+        "line-web": {
+          "label": "Line (web)",
+          "addClass": ["slot-divider--line-web"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line", "slot-divider--line-margin", "slot-divider--line-slot", "slot-divider--line-slot-margin", "slot-divider--line-margin-web", "slot-divider--line-slot-web", "slot-divider--line-slot-margin-web", "slot-divider--focus", "slot-divider--focus-margin", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Web line" }
+        },
+        "line-margin-web": {
+          "label": "LineMargin (web)",
+          "addClass": ["slot-divider--line-margin-web"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line", "slot-divider--line-margin", "slot-divider--line-slot", "slot-divider--line-slot-margin", "slot-divider--line-web", "slot-divider--line-slot-web", "slot-divider--line-slot-margin-web", "slot-divider--focus", "slot-divider--focus-margin", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Web line with margins" }
+        },
+        "line-slot-web": {
+          "label": "LineSlot (web)",
+          "addClass": ["slot-divider--line-slot-web"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line", "slot-divider--line-margin", "slot-divider--line-slot", "slot-divider--line-slot-margin", "slot-divider--line-web", "slot-divider--line-margin-web", "slot-divider--line-slot-margin-web", "slot-divider--focus", "slot-divider--focus-margin", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Web slot-indented line" }
+        },
+        "line-slot-margin-web": {
+          "label": "LineSlotMargin (web)",
+          "addClass": ["slot-divider--line-slot-margin-web"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line", "slot-divider--line-margin", "slot-divider--line-slot", "slot-divider--line-slot-margin", "slot-divider--line-web", "slot-divider--line-margin-web", "slot-divider--line-slot-web", "slot-divider--focus", "slot-divider--focus-margin", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Web slot-indented line with trailing margin" }
+        },
+        "focus": {
+          "label": "Focus",
+          "addClass": ["slot-divider--focus"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line", "slot-divider--line-margin", "slot-divider--line-slot", "slot-divider--line-slot-margin", "slot-divider--line-web", "slot-divider--line-margin-web", "slot-divider--line-slot-web", "slot-divider--line-slot-margin-web", "slot-divider--focus-margin", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Focus divider" }
+        },
+        "focus-margin": {
+          "label": "FocusMargin",
+          "addClass": ["slot-divider--focus-margin"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line", "slot-divider--line-margin", "slot-divider--line-slot", "slot-divider--line-slot-margin", "slot-divider--line-web", "slot-divider--line-margin-web", "slot-divider--line-slot-web", "slot-divider--line-slot-margin-web", "slot-divider--focus", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Focus divider with margins" }
+        },
+        "card": {
+          "label": "Card",
+          "addClass": ["slot-divider--card"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line", "slot-divider--line-margin", "slot-divider--line-slot", "slot-divider--line-slot-margin", "slot-divider--line-web", "slot-divider--line-margin-web", "slot-divider--line-slot-web", "slot-divider--line-slot-margin-web", "slot-divider--focus", "slot-divider--focus-margin", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Card divider" }
+        },
+        "cut-margin": {
+          "label": "CutMargin",
+          "addClass": ["slot-divider--cut-margin"],
+          "removeClass": ["slot-divider--group-title", "slot-divider--line", "slot-divider--line-margin", "slot-divider--line-slot", "slot-divider--line-slot-margin", "slot-divider--line-web", "slot-divider--line-margin-web", "slot-divider--line-slot-web", "slot-divider--line-slot-margin-web", "slot-divider--focus", "slot-divider--focus-margin", "slot-divider--card", "slot-divider--card-top", "slot-divider--card-bottom", "slot-divider--cut", "slot-divider--cut-margin-top", "slot-divider--cut-margin-bottom"],
+          "attr": { "data-title": null, "aria-label": "Cut divider with margins" }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "segments",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "size",
+      "label": "Size",
+      "type": "select",
+      "default": "l",
+      "options": {
+        "l": {
+          "label": "L",
+          "removeClass": ["segments--m", "segments--s", "segments--xs"]
+        },
+        "m": {
+          "label": "M",
+          "addClass": ["segments--m"]
+        },
+        "s": {
+          "label": "S",
+          "addClass": ["segments--s"]
+        },
+        "xs": {
+          "label": "XS",
+          "addClass": ["segments--xs"]
+        }
+      }
+    },
+    {
+      "id": "selected",
+      "label": "Selected",
+      "type": "select",
+      "default": "1",
+      "options": {
+        "1": {
+          "mutations": [
+            { "selector": ".segments__input[value='1']", "attr": { "checked": "" } },
+            { "selector": ".segments__input[value='2'], .segments__input[value='3'], .segments__input[value='4'], .segments__input[value='5']", "attr": { "checked": null } }
+          ]
+        },
+        "2": {
+          "mutations": [
+            { "selector": ".segments__input[value='2']", "attr": { "checked": "" } },
+            { "selector": ".segments__input[value='1'], .segments__input[value='3'], .segments__input[value='4'], .segments__input[value='5']", "attr": { "checked": null } }
+          ]
+        },
+        "3": {
+          "mutations": [
+            { "selector": ".segments__input[value='3']", "attr": { "checked": "" } },
+            { "selector": ".segments__input[value='1'], .segments__input[value='2'], .segments__input[value='4'], .segments__input[value='5']", "attr": { "checked": null } }
+          ]
+        },
+        "4": {
+          "mutations": [
+            { "selector": ".segments__input[value='4']", "attr": { "checked": "" } },
+            { "selector": ".segments__input[value='1'], .segments__input[value='2'], .segments__input[value='3'], .segments__input[value='5']", "attr": { "checked": null } }
+          ]
+        },
+        "5": {
+          "mutations": [
+            { "selector": ".segments__input[value='5']", "attr": { "checked": "" } },
+            { "selector": ".segments__input[value='1'], .segments__input[value='2'], .segments__input[value='3'], .segments__input[value='4']", "attr": { "checked": null } }
+          ]
+        }
+      }
+    },
+    {
+      "id": "state",
+      "label": "State",
+      "type": "select",
+      "default": "release",
+      "options": {
+        "release": {
+          "label": "Release"
+        },
+        "pressed": {
+          "label": "Pressed",
+          "selector": ".segments__option:has(.segments__input:checked)",
+          "addClass": ["segments__option--pressed"]
+        },
+        "focused": {
+          "label": "Focused",
+          "selector": ".segments__option:has(.segments__input:checked)",
+          "addClass": ["segments__option--focused"]
+        }
+      }
+    },
+    {
+      "id": "disabled",
+      "label": "Disabled",
+      "type": "boolean",
+      "default": false,
+      "options": {
+        "false": {
+          "selector": ".segments__input",
+          "attr": {
+            "disabled": null
+          }
+        },
+        "true": {
+          "selector": ".segments__input",
+          "attr": {
+            "disabled": ""
+          }
+        }
+      }
+    }
+  ]
+}

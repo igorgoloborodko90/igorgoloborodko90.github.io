@@ -1,0 +1,183 @@
+{
+  "id": "slot-trail",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "variant",
+      "label": "Variant",
+      "type": "select",
+      "default": "loading",
+      "options": {
+        "loading": {
+          "label": "Loading",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"loading\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "nav": {
+          "label": "Nav",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"nav\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "nav-bold": {
+          "label": "Nav · Bold",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"nav-bold\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "icon": {
+          "label": "Icon",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"icon\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "spot": {
+          "label": "Spot",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"spot\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "payment": {
+          "label": "Payment",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"payment\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "switch": {
+          "label": "Switch",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"switch\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "button": {
+          "label": "Button",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"button\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "button-outline": {
+          "label": "Button · Outline",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"button-outline\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "button-action": {
+          "label": "Button · Action",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"button-action\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "button-pair": {
+          "label": "Button · 2",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"button-pair\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "plus-badge": {
+          "label": "Plus · Badge",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"plus-badge\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "plus-points": {
+          "label": "Plus · Points",
+          "mutations": [
+            {
+              "selector": "[data-slot-trail-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-slot-trail-variant=\"plus-points\"]",
+              "hidden": false
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

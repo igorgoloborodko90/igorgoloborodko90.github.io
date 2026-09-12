@@ -1,0 +1,69 @@
+{
+  "id": "counter",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "size",
+      "label": "Size",
+      "type": "select",
+      "default": "l",
+      "options": {
+        "l": {
+          "label": "L",
+          "removeClass": ["slot-trail-counter--m", "slot-trail-counter--s", "slot-trail-counter--xs"],
+          "addClass": ["slot-trail-counter--l"],
+          "attr": {
+            "aria-label": "L counter"
+          }
+        },
+        "m": {
+          "label": "M",
+          "removeClass": ["slot-trail-counter--l", "slot-trail-counter--s", "slot-trail-counter--xs"],
+          "addClass": ["slot-trail-counter--m"],
+          "attr": {
+            "aria-label": "M counter"
+          }
+        },
+        "s": {
+          "label": "S",
+          "removeClass": ["slot-trail-counter--l", "slot-trail-counter--m", "slot-trail-counter--xs"],
+          "addClass": ["slot-trail-counter--s"],
+          "attr": {
+            "aria-label": "S counter"
+          }
+        },
+        "xs": {
+          "label": "XS",
+          "removeClass": ["slot-trail-counter--l", "slot-trail-counter--m", "slot-trail-counter--s"],
+          "addClass": ["slot-trail-counter--xs"],
+          "attr": {
+            "aria-label": "XS counter"
+          }
+        }
+      }
+    },
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "select",
+      "default": "0",
+      "options": {
+        "0": {
+          "label": "Min",
+          "selector": ".slot-trail-counter__value",
+          "text": "0"
+        },
+        "1": {
+          "label": "Normal",
+          "selector": ".slot-trail-counter__value",
+          "text": "1"
+        },
+        "2": {
+          "label": "Max",
+          "selector": ".slot-trail-counter__value",
+          "text": "2"
+        }
+      }
+    }
+  ]
+}

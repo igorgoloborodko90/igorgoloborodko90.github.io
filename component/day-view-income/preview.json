@@ -1,0 +1,72 @@
+{
+  "id": "day-view-income",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "state",
+      "label": "State",
+      "type": "select",
+      "default": "default",
+      "options": {
+        "default": {
+          "label": "Default",
+          "addClass": ["day-view-income--default"],
+          "removeClass": ["day-view-income--shimmer", "day-view-income--waiting", "day-view-income--reload", "day-view-income--informer"],
+          "attr": { "aria-label": "Day income: 150 cents from 0 orders" },
+          "mutations": [
+            { "selector": ".day-view-income__label-text", "text": "0 заказов" },
+            { "selector": ".day-view-income__value", "text": "150 ₵" },
+            { "selector": ".day-view-income__chevron", "hidden": false },
+            { "selector": ".day-view-income__badge", "hidden": true },
+            { "selector": ".day-view-income__reload", "attr": { "hidden": "" } },
+            { "selector": ".day-view-income__waiting", "attr": { "hidden": "" } }
+          ]
+        },
+        "informer": {
+          "label": "Informer",
+          "addClass": ["day-view-income--informer"],
+          "removeClass": ["day-view-income--shimmer", "day-view-income--waiting", "day-view-income--reload", "day-view-income--default"],
+          "attr": { "aria-label": "Day income: 150 cents from 0 orders with informer" },
+          "mutations": [
+            { "selector": ".day-view-income__label-text", "text": "0 заказов" },
+            { "selector": ".day-view-income__value", "text": "150 ₵" },
+            { "selector": ".day-view-income__chevron", "hidden": true },
+            { "selector": ".day-view-income__badge", "hidden": false },
+            { "selector": ".day-view-income__reload", "attr": { "hidden": "" } },
+            { "selector": ".day-view-income__waiting", "attr": { "hidden": "" } }
+          ]
+        },
+        "waiting": {
+          "label": "Waiting",
+          "addClass": ["day-view-income--waiting"],
+          "removeClass": ["day-view-income--shimmer", "day-view-income--reload", "day-view-income--default", "day-view-income--informer"],
+          "attr": { "aria-label": "Income loading" },
+          "mutations": [
+            { "selector": ".day-view-income__reload", "attr": { "hidden": "" } },
+            { "selector": ".day-view-income__waiting", "attr": { "hidden": null } }
+          ]
+        },
+        "reload": {
+          "label": "Reload",
+          "addClass": ["day-view-income--reload"],
+          "removeClass": ["day-view-income--shimmer", "day-view-income--waiting", "day-view-income--default", "day-view-income--informer"],
+          "attr": { "aria-label": "Reload income" },
+          "mutations": [
+            { "selector": ".day-view-income__reload", "attr": { "hidden": null } },
+            { "selector": ".day-view-income__waiting", "attr": { "hidden": "" } }
+          ]
+        },
+        "shimmer": {
+          "label": "Shimmer",
+          "addClass": ["day-view-income--shimmer"],
+          "removeClass": ["day-view-income--waiting", "day-view-income--reload", "day-view-income--default", "day-view-income--informer"],
+          "attr": { "aria-label": "Income skeleton" },
+          "mutations": [
+            { "selector": ".day-view-income__reload", "attr": { "hidden": "" } },
+            { "selector": ".day-view-income__waiting", "attr": { "hidden": "" } }
+          ]
+        }
+      }
+    }
+  ]
+}

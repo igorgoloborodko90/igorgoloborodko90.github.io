@@ -1,0 +1,167 @@
+{
+  "id": "day-view-goal",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "variant",
+      "label": "Variant",
+      "type": "select",
+      "default": "default-first",
+      "options": {
+        "promo": {
+          "label": "Promo",
+          "addClass": ["day-view-goal--promo"],
+          "removeClass": ["day-view-goal--first", "day-view-goal--second", "day-view-goal--default", "day-view-goal--stepped", "day-view-goal--informer", "day-view-goal--error", "day-view-goal--done", "day-view-goal--unavailable", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Choose goal up to 5000 rubles" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Выберите цель" },
+            { "selector": ".day-view-goal__meta", "text": "", "hidden": true },
+            { "selector": ".day-view-goal__amount", "text": "до 5 000 ₽", "hidden": false },
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        },
+        "default-first": {
+          "label": "Default · First",
+          "addClass": ["day-view-goal--first", "day-view-goal--default"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--second", "day-view-goal--stepped", "day-view-goal--informer", "day-view-goal--error", "day-view-goal--done", "day-view-goal--unavailable", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Goal: 2 orders left" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Ещё 2 заказа" },
+            { "selector": ".day-view-goal__meta", "text": "18/20 · 3 дня", "hidden": false },
+            { "selector": ".day-view-goal__amount", "text": "+5 000 ₽", "hidden": false },
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        },
+        "stepped-first": {
+          "label": "Stepped · First",
+          "addClass": ["day-view-goal--first", "day-view-goal--stepped"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--second", "day-view-goal--default", "day-view-goal--informer", "day-view-goal--error", "day-view-goal--done", "day-view-goal--unavailable", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Stepped goal: 2 orders left" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Ещё 2 заказа" },
+            { "selector": ".day-view-goal__meta", "text": "4/6, 10 всего · 3 дня", "hidden": false },
+            { "selector": ".day-view-goal__amount", "text": "+5 000 ₽", "hidden": false },
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        },
+        "informer-first": {
+          "label": "Informer · First",
+          "addClass": ["day-view-goal--first", "day-view-goal--informer"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--second", "day-view-goal--default", "day-view-goal--stepped", "day-view-goal--error", "day-view-goal--done", "day-view-goal--unavailable", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Goal requires branding" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Нужен брендинг" },
+            { "selector": ".day-view-goal__meta", "text": "20 заказов · 3 дня", "hidden": false },
+            { "selector": ".day-view-goal__amount", "text": "+5 000 ₽", "hidden": false },
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        },
+        "error-first": {
+          "label": "Error · First",
+          "addClass": ["day-view-goal--first", "day-view-goal--error"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--second", "day-view-goal--default", "day-view-goal--stepped", "day-view-goal--informer", "day-view-goal--done", "day-view-goal--unavailable", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Comfort plus goal error" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Цель на Комфорт+" },
+            { "selector": ".day-view-goal__meta", "text": "18/20 · 3 дня", "hidden": false },
+            { "selector": ".day-view-goal__amount", "text": "+5 000 ₽", "hidden": false },
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        },
+        "done-first": {
+          "label": "Done · First",
+          "addClass": ["day-view-goal--first", "day-view-goal--done"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--second", "day-view-goal--default", "day-view-goal--stepped", "day-view-goal--informer", "day-view-goal--error", "day-view-goal--unavailable", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Goal completed" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Цель выполнена!" },
+            { "selector": ".day-view-goal__meta", "text": "", "hidden": true },
+            { "selector": ".day-view-goal__amount", "text": "+5 000 ₽", "hidden": false },
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        },
+        "default-second": {
+          "label": "Default · Second",
+          "addClass": ["day-view-goal--second", "day-view-goal--default"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--first", "day-view-goal--stepped", "day-view-goal--informer", "day-view-goal--error", "day-view-goal--done", "day-view-goal--unavailable", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Second goal: 2 orders left" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Ещё 2 заказа" },
+            { "selector": ".day-view-goal__meta", "text": "18/20 · 3 дня", "hidden": false },
+            { "selector": ".day-view-goal__amount", "text": "+5 000 ₽", "hidden": false },
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        },
+        "stepped-second": {
+          "label": "Stepped · Second",
+          "addClass": ["day-view-goal--second", "day-view-goal--stepped"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--first", "day-view-goal--default", "day-view-goal--informer", "day-view-goal--error", "day-view-goal--done", "day-view-goal--unavailable", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Second stepped goal" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Ещё 2 заказа" },
+            { "selector": ".day-view-goal__meta", "text": "4/6, 10 всего · 3 дня", "hidden": false },
+            { "selector": ".day-view-goal__amount", "text": "+5 000 ₽", "hidden": false },
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        },
+        "informer-second": {
+          "label": "Informer · Second",
+          "addClass": ["day-view-goal--second", "day-view-goal--informer"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--first", "day-view-goal--default", "day-view-goal--stepped", "day-view-goal--error", "day-view-goal--done", "day-view-goal--unavailable", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Second goal requires branding" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Нужен брендинг" },
+            { "selector": ".day-view-goal__meta", "text": "20 заказов · 3 дня", "hidden": false },
+            { "selector": ".day-view-goal__amount", "text": "+4 000 ₽", "hidden": false },
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        },
+        "error-second": {
+          "label": "Error · Second",
+          "addClass": ["day-view-goal--second", "day-view-goal--error"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--first", "day-view-goal--default", "day-view-goal--stepped", "day-view-goal--informer", "day-view-goal--done", "day-view-goal--unavailable", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Second Comfort plus goal error" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Цель на Комфорт+" },
+            { "selector": ".day-view-goal__meta", "text": "18/20 · 3 дня", "hidden": false },
+            { "selector": ".day-view-goal__amount", "text": "+4 000 ₽", "hidden": false },
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        },
+        "done-second": {
+          "label": "Done · Second",
+          "addClass": ["day-view-goal--second", "day-view-goal--done"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--first", "day-view-goal--default", "day-view-goal--stepped", "day-view-goal--informer", "day-view-goal--error", "day-view-goal--unavailable", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Second goal completed" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Цель выполнена!" },
+            { "selector": ".day-view-goal__meta", "text": "", "hidden": true },
+            { "selector": ".day-view-goal__amount", "text": "+4 000 ₽", "hidden": false },
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        },
+        "unavailable-second": {
+          "label": "Unavailable · Second",
+          "addClass": ["day-view-goal--second", "day-view-goal--unavailable"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--first", "day-view-goal--default", "day-view-goal--stepped", "day-view-goal--informer", "day-view-goal--error", "day-view-goal--done", "day-view-goal--shimmer"],
+          "attr": { "aria-label": "Some bonuses are unavailable" },
+          "mutations": [
+            { "selector": ".day-view-goal__title", "text": "Часть бонусов не доступна" },
+            { "selector": ".day-view-goal__meta", "text": "Узнать подробнее", "hidden": false },
+            { "selector": ".day-view-goal__amount", "text": "+4 000 ₽", "hidden": true },
+            { "selector": ".day-view-goal__trail", "hidden": false }
+          ]
+        },
+        "shimmer-second": {
+          "label": "Shimmer · Second",
+          "addClass": ["day-view-goal--second", "day-view-goal--shimmer"],
+          "removeClass": ["day-view-goal--promo", "day-view-goal--first", "day-view-goal--default", "day-view-goal--stepped", "day-view-goal--informer", "day-view-goal--error", "day-view-goal--done", "day-view-goal--unavailable"],
+          "attr": { "aria-label": "Goal skeleton" },
+          "mutations": [
+            { "selector": ".day-view-goal__trail", "hidden": true }
+          ]
+        }
+      }
+    }
+  ]
+}

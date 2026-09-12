@@ -1,0 +1,211 @@
+{
+  "id": "progress",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "variant",
+      "label": "Variant",
+      "type": "select",
+      "default": "position",
+      "options": {
+        "position": {
+          "label": "Position",
+          "mutations": [
+            {
+              "selector": "[data-progress-preview-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-progress-preview-variant=\"position\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "pulse-start": {
+          "label": "Pulse · Start",
+          "mutations": [
+            {
+              "selector": "[data-progress-preview-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-progress-preview-variant=\"pulse-start\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "pulse-end": {
+          "label": "Pulse · End",
+          "mutations": [
+            {
+              "selector": "[data-progress-preview-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-progress-preview-variant=\"pulse-end\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "step-empty": {
+          "label": "Step · Empty",
+          "mutations": [
+            {
+              "selector": "[data-progress-preview-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-progress-preview-variant=\"step-empty\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "step-start": {
+          "label": "Step · Start",
+          "mutations": [
+            {
+              "selector": "[data-progress-preview-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-progress-preview-variant=\"step-start\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "step-mid": {
+          "label": "Step · Mid",
+          "mutations": [
+            {
+              "selector": "[data-progress-preview-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-progress-preview-variant=\"step-mid\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "step-end": {
+          "label": "Step · End",
+          "mutations": [
+            {
+              "selector": "[data-progress-preview-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-progress-preview-variant=\"step-end\"]",
+              "hidden": false
+            }
+          ]
+        },
+        "step-finish": {
+          "label": "Step · Finish",
+          "mutations": [
+            {
+              "selector": "[data-progress-preview-variant]",
+              "hidden": true
+            },
+            {
+              "selector": "[data-progress-preview-variant=\"step-finish\"]",
+              "hidden": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "type",
+      "label": "Position Type",
+      "type": "select",
+      "default": "inactive",
+      "options": {
+        "inactive": {
+          "label": "Inactive",
+          "selector": "[data-progress-position]",
+          "removeClass": ["progress--progress", "progress--done", "progress--pulse-end"],
+          "addClass": ["progress--inactive"]
+        },
+        "progress": {
+          "label": "Progress",
+          "selector": "[data-progress-position]",
+          "removeClass": ["progress--inactive", "progress--done"],
+          "addClass": ["progress--progress", "progress--pulse-end"]
+        },
+        "done": {
+          "label": "Done",
+          "selector": "[data-progress-position]",
+          "removeClass": ["progress--inactive", "progress--progress", "progress--pulse-end"],
+          "addClass": ["progress--done"]
+        }
+      }
+    },
+    {
+      "id": "direction",
+      "label": "Direction",
+      "type": "select",
+      "default": "none",
+      "options": {
+        "none": {
+          "label": "None",
+          "selector": "[data-progress-position]",
+          "removeClass": ["progress--direction-bottom", "progress--direction-top", "progress--direction-both"]
+        },
+        "bottom": {
+          "label": "Bottom",
+          "selector": "[data-progress-position]",
+          "removeClass": ["progress--direction-top", "progress--direction-both"],
+          "addClass": ["progress--direction-bottom"]
+        },
+        "top": {
+          "label": "Top",
+          "selector": "[data-progress-position]",
+          "removeClass": ["progress--direction-bottom", "progress--direction-both"],
+          "addClass": ["progress--direction-top"]
+        },
+        "both": {
+          "label": "Both",
+          "selector": "[data-progress-position]",
+          "removeClass": ["progress--direction-bottom", "progress--direction-top"],
+          "addClass": ["progress--direction-both"]
+        }
+      }
+    },
+    {
+      "id": "weight",
+      "label": "Weight",
+      "type": "select",
+      "default": "m",
+      "options": {
+        "m": {
+          "label": "M",
+          "selector": "[data-progress-position]",
+          "removeClass": ["progress--weight-s"]
+        },
+        "s": {
+          "label": "S",
+          "selector": "[data-progress-position]",
+          "addClass": ["progress--weight-s"]
+        }
+      }
+    },
+    {
+      "id": "lineSize",
+      "label": "Line Size",
+      "type": "select",
+      "default": "m",
+      "options": {
+        "m": {
+          "label": "M",
+          "selector": "[data-progress-position]",
+          "removeClass": ["progress--line-s"]
+        },
+        "s": {
+          "label": "S",
+          "selector": "[data-progress-position]",
+          "addClass": ["progress--line-s"]
+        }
+      }
+    }
+  ]
+}

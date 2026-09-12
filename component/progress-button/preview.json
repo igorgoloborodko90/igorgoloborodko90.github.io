@@ -1,0 +1,41 @@
+{
+  "id": "progress-button",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "state",
+      "label": "State",
+      "type": "select",
+      "default": "countdown",
+      "options": {
+        "countdown": {
+          "label": "Countdown",
+          "removeClass": ["progress-button--default", "progress-button--loading"],
+          "addClass": ["progress-button--countdown"],
+          "attr": {
+            "data-progress-state": "countdown",
+            "aria-label": "Countdown progress button"
+          }
+        },
+        "default": {
+          "label": "Default",
+          "removeClass": ["progress-button--countdown", "progress-button--loading"],
+          "addClass": ["progress-button--default"],
+          "attr": {
+            "data-progress-state": "default",
+            "aria-label": "Default progress button"
+          }
+        },
+        "loading": {
+          "label": "Loading",
+          "removeClass": ["progress-button--countdown", "progress-button--default"],
+          "addClass": ["progress-button--loading"],
+          "attr": {
+            "data-progress-state": "loading",
+            "aria-label": "Loading progress button"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "radio",
+  "target": "[data-preview-target]",
+  "controls": [
+    {
+      "id": "size",
+      "label": "Size",
+      "type": "select",
+      "default": "m",
+      "options": {
+        "m": {
+          "label": "M",
+          "removeClass": ["slot-trail-radio--s"]
+        },
+        "s": {
+          "label": "S",
+          "addClass": ["slot-trail-radio--s"]
+        }
+      }
+    },
+    {
+      "id": "checked",
+      "label": "Checked",
+      "type": "boolean",
+      "default": false,
+      "options": {
+        "false": {
+          "selector": ".slot-trail-radio__input",
+          "attr": {
+            "checked": null
+          }
+        },
+        "true": {
+          "selector": ".slot-trail-radio__input",
+          "attr": {
+            "checked": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "disabled",
+      "label": "Disabled",
+      "type": "boolean",
+      "default": false,
+      "options": {
+        "false": {
+          "selector": ".slot-trail-radio__input",
+          "attr": {
+            "disabled": null
+          }
+        },
+        "true": {
+          "selector": ".slot-trail-radio__input",
+          "attr": {
+            "disabled": ""
+          }
+        }
+      }
+    }
+  ]
+}
