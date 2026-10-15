@@ -1,10 +1,11 @@
-name: Publish oil booking
+name: Publish prototypes
 
 on:
   push:
     branches: [main]
     paths:
       - oil-booking-site.zip
+      - energy-saving-site-*.zip
       - .github/workflows/github-pages.yml
   workflow_dispatch:
 
@@ -30,11 +31,16 @@ jobs:
         uses: actions/checkout@v6
         with:
           persist-credentials: false
-      - name: Prepare only the oil booking site
+      - name: Prepare published prototypes
         run: |
           mkdir -p "$RUNNER_TEMP/oil-booking-site"
           unzip -q oil-booking-site.zip -d "$RUNNER_TEMP/oil-booking-site"
+          for archive in energy-saving-site-*.zip; do
+            [ -f "$archive" ] || continue
+            unzip -q "$archive" -d "$RUNNER_TEMP/oil-booking-site"
+          done
           test -f "$RUNNER_TEMP/oil-booking-site/index.html"
+          test -f "$RUNNER_TEMP/oil-booking-site/energy-saving/index.html"
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site
